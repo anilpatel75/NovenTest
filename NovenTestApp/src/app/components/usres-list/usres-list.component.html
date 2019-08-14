@@ -1,0 +1,10 @@
+<div>
+  <div><h1>Users List</h1></div>
+  <hr>
+  <div>
+      <ul class="list-group">
+          <li class="list-group-item" *ngFor="let item of listOfUsers" (click)="onSelectedusers(item.id)">{{item.name}}</li>
+         
+        </ul>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div>
+  <div>
+    <h1>Seleted User</h1>
+  </div>
+  <hr>
+  <div class="main-selected-user">
+    <div *ngIf="userCompleted.length > 1">
+      <h3>User with completed</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of userCompleted">{{item.title}} |  ID:{{item.id}}</li>
+      </ul>
+    </div>
+
+    <div *ngIf="userUncompleted.length > 1">
+      <h3>User with Uncompleted</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of userUncompleted">{{item.title}} | ID:{{item.id}} </li>
+
+      </ul>
+    </div>
+  </div>
+
+</div>
