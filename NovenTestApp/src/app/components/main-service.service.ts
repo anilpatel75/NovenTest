@@ -6,7 +6,11 @@ import { Subject, BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class MainServiceService {
+
+  // observable  for listen events and bind data
   public userSubject = new Subject();
+  
+  // behaviorSubject for  bind data for chart
   public chartWithCompleted = new BehaviorSubject<any>('');
   public chartWithUnCompleted = new BehaviorSubject<any>('');
 

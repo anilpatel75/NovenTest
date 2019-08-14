@@ -7,12 +7,15 @@ import { MainServiceService } from '../components/main-service.service';
   styleUrls: ['./users-container.component.css']
 })
 export class UsersContainerComponent implements OnInit {
-    chartWithCompleted :any;
-    chartWithUnCompleted: any;
+
+  chartWithCompleted :any;
+  chartWithUnCompleted: any;
+
   constructor(private mainService: MainServiceService) { }
 
+  //subscribe the subject to get the latest chart data 
   ngOnInit() {
-    this.mainService.chartWithCompleted.subscribe((chartWithCompleted)=> {
+    this.mainService.chartWithCompleted.subscribe((chartWithCompleted) => {
      this.chartWithCompleted = chartWithCompleted;
     }),
 
